@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.*;
 
 @Controller
-@RequestMapping("/api/games")
+@RequestMapping("/games")
 public class NintendoForms {
     // List all games page
     @GetMapping
