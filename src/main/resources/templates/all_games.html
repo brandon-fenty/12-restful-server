@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>All Games</title>
+    </head>
+    <body>
+        <h1>Nintendo Games</h1>
+        <p>
+            <a href="/games/new">Add a game</a>
+        </p>
+        <ul>
+            <li th:each="game : ${games}">
+                <p>
+                    <span th:text="${game.title}" />
+                    <span th:text="${game.genre}" />
+                    <span th:text="${game.releaseDate}" />
+                    <a th:href="'/games/' + ${game.id} + '/edit'">Edit</a>
+                </p>
+            </li>
+        </ul>
+    </body>
+</html>
