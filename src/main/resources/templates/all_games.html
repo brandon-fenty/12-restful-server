@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>All Games</title>
+        <link rel="stylesheet" href="/css/main.css" />
     </head>
     <body>
         <h1>Nintendo Games</h1>
@@ -12,9 +13,12 @@
         <ul>
             <li th:each="game : ${games}">
                 <p>
-                    <span th:text="${game.title}" />
-                    <span th:text="${game.genre}" />
-                    <span th:text="${game.releaseDate}" />
+                    <span>Title: </span>
+                    <span th:text="${game.title}"></span>
+                    <span> || Genre: </span>
+                    <span th:text="${game.genre}"></span>
+                    <span> || Release Date: </span>
+                    <span th:text="${game.releaseDate}"></span>
                     <a th:href="'/games/' + ${game.id} + '/edit'">Edit</a>
                 </p>
             </li>

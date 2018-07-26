@@ -22,7 +22,7 @@ public class NintendoAPI {
     ) {
         Game game = new Game(title, genre, releaseDate);
         GameStorage.games.put(game.id, game);
-        return new ModelAndView("forward:/api/games");
+        return new ModelAndView("redirect:/games");
     }
 
     // Read all
